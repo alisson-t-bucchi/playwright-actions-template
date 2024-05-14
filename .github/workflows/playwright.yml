@@ -26,7 +26,8 @@ jobs:
     - name: Run end-2-end tests
       run: npx playwright test
 
-    - uses: actions/upload-artifact@v4
+    - name: Publish report 
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: playwright-report
